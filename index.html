@@ -11,17 +11,17 @@
 <body>
     <div class="container">
         <div id="map"></div> 
-        <div id="menu">&#9776;</div>    
-        <div id="list">
+        <div id="menu" data-bind="click: toggleMenu">&#9776;</div>    
+        <div id="list" data-bind="visible: menuStatus() % 2 !== 1">
             <h1>CORN Locations</h1>
             <input id="searchInput" type="text" data-bind="value: searchInput">
-            <br />
+            
             <div class="button_group">
                 <input id="filter" class="button" type="button" value="Filter" data-bind="click: filterLocations">
-                <input id="reset" class="button hidden" type="button" value="Reset" data-bind="click: resetLocations">
+                <input id="reset" class="button" type="button" value="Reset" data-bind="click: resetLocations">
             </div>
             <ul data-bind="foreach: locations">
-                <li class="location" data-bind="text: title"></li>
+                <li class="location" data-bind="text: title, click: $parent.loadInfoWindow"></li>
             </ul>
         </div>
     </div>

@@ -84,7 +84,7 @@ html, body {
     padding: 0;
 }
 
-#list ul li {
+li.location {
     list-style-type: none;
     /*border-top: 1px solid #fff;*/
     border-bottom: 1px solid #777;
@@ -93,8 +93,9 @@ html, body {
     padding: 10px 20px;
     color: #fff;
 }
-#list ul li:hover {
+li.location:hover {
     background-color: #333;
+    cursor: pointer;
 }
 
 #map {
@@ -106,13 +107,14 @@ html, body {
 #searchInput {
     width: 240px;
     height: 40px;
-    margin: 10px 20px;   
+    margin: 60px 20px 10px;   
     padding-left: 10px; 
     font-size: 1em;
+    display: block;
 }
 
 .button_group {
-    padding-left: 180px;
+    padding-left: 95px;
 }
 
 .button {
@@ -131,8 +133,7 @@ html, body {
 .button:hover {
     background-color: #333;
     
-}
-
+} 
 
 .infowindow {
     width: 500px;
